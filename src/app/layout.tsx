@@ -1,3 +1,4 @@
+```tsx
 import { ApplePwaSplash } from '@/app/apple-pwa-splash'
 import { LocaleSwitcher } from '@/components/locale-switcher'
 import { ProgressBar } from '@/components/progress-bar'
@@ -24,14 +25,14 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(effectiveBaseUrl),
     title: {
       default: t('metaTitle'),
-      template: '%s · Spliit',
+      template: '%s · BonsComptes',
     },
     description:
-      'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+      'BonsComptes is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
     openGraph: {
       title: t('metaTitle'),
       description:
-        'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+        'BonsComptes is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
       images: `/banner.png`,
       type: 'website',
       url: '/',
@@ -43,13 +44,13 @@ export async function generateMetadata(): Promise<Metadata> {
       images: `/banner.png`,
       title: t('metaTitle'),
       description:
-        'Spliit is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
+        'BonsComptes is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
     },
     appleWebApp: {
       capable: true,
-      title: 'Spliit',
+      title: 'BonsComptes',
     },
-    applicationName: 'Spliit',
+    applicationName: 'BonsComptes',
     icons: [
       {
         url: '/android-chrome-192x192.png',
@@ -84,7 +85,7 @@ function Content({ children }: { children: React.ReactNode }) {
               className="m-1 h-auto w-auto"
               width={(35 * 522) / 180}
               height={35}
-              alt="Spliit"
+              alt="BonsComptes"
             />
           </h1>
         </Link>
@@ -121,7 +122,7 @@ function Content({ children }: { children: React.ReactNode }) {
                 className="m-1 h-auto w-auto"
                 width={(35 * 522) / 180}
                 height={35}
-                alt="Spliit"
+                alt="BonsComptes"
               />
             </Link>
           </div>
@@ -170,9 +171,6 @@ export default async function RootLayout({
       <ApplePwaSplash icon="/logo-with-text.png" color="#047857" />
       <body className="min-h-[100dvh] flex flex-col items-stretch bg-slate-50 bg-opacity-30 dark:bg-background">
         <NextIntlClientProvider messages={messages}>
-          {/* Rendered inside the provider because it reads translations via
-              `useTranslations`, which needs NextIntlClientProvider in its
-              ancestor tree. */}
           <ServiceWorkerRegistration />
           <Analytics config={analyticsConfig}>
             <ThemeProvider
@@ -192,3 +190,5 @@ export default async function RootLayout({
     </html>
   )
 }
+
+```
