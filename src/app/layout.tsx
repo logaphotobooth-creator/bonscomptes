@@ -1,4 +1,3 @@
-```tsx
 import { ApplePwaSplash } from '@/app/apple-pwa-splash'
 import { LocaleSwitcher } from '@/components/locale-switcher'
 import { ProgressBar } from '@/components/progress-bar'
@@ -33,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: t('metaTitle'),
       description:
         'BonsComptes is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
-      images: `/banner.png`,
+      images: '/banner.png',
       type: 'website',
       url: '/',
     },
@@ -41,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       creator: '@scastiel',
       site: '@scastiel',
-      images: `/banner.png`,
+      images: '/banner.png',
       title: t('metaTitle'),
       description:
         'BonsComptes is a minimalist web application to share expenses with friends and family. No ads, no account, no problem.',
@@ -190,5 +189,3 @@ export default async function RootLayout({
     </html>
   )
 }
-
-```
